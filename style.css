@@ -6,7 +6,7 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(360deg, #d17777, #f37873 20%, #b69067);
+  background: #a28c76;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,11 +14,11 @@ body {
 }
 
 body * {
-  font-family: 'Kanit';
+  font-family: "Kanit";
 }
 
 .calculator {
-  background: rgb(150, 206, 180, 0.70);
+  background: rgb(150, 206, 180, 0.7);
   border-radius: 28px;
 }
 
@@ -28,6 +28,10 @@ body * {
   padding: 30px 26px;
   gap: 10px;
   color: #443321;
+}
+
+.bar:hover {
+  color: #f7df9c;
 }
 
 .display {
@@ -40,17 +44,20 @@ body * {
   border-radius: 15px;
   color: #443321;
   font-size: 18px;
-}
-
-.last-calc {
-  text-align: right;
-}
-
-.result {
+  height: 80px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+
+.last-calc-box {
+  text-align: right;
+  height: 35px;
+}
+
+.result-box {
+  text-align: right;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 28px;
 }
 
 .keyboard {
@@ -75,12 +82,12 @@ button {
 
 button:hover {
   background-color: #f7df9c;
-  transform: scale(1.050);
+  transform: scale(1.05);
 }
 
 .operator {
   background-color: #816658;
-  color: #f7df9c;;
+  color: #f7df9c;
 }
 
 .operator:hover {
@@ -117,4 +124,5 @@ button:hover {
 
 .attribution a {
   text-decoration: none;
+  color: #f7df9c;
 }

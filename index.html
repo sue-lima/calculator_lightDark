@@ -17,49 +17,49 @@
 <body>
   <div class="calculator">
     <div class="bar">
-      <i class="fa-solid fa-clock-rotate-left fa-lg"></i>
       <i class="fa-solid fa-circle-half-stroke fa-lg"></i>
     </div>
     <div class="display">
       <div class="display-info">
-        <div class="last-calc">
-          <p>8 + 1</p>
+        <div class="last-calc-box">
+          <p id="last-calc"></p>
         </div>
-        <div class="result">
-          <i class="fa-solid fa-equals"></i>
-          <p> 9 </p>
+        <i class="fa-solid fa-equals fa-lg"></i>
+        <div class="result-box">
+          <p id="result"></p>
         </div>
       </div>
     </div>
     <div class="keyboard">
-      <button>CE</button>
-      <button>C</button>
-      <button><i class="fa-solid fa-percent"></i></button>
-      <button class="backspace"><i class="fa-solid fa-delete-left"></i></button>
-      <button><i class="fa-solid fa-square-root-variable"></i></button>
-      <button><i class="fa-solid fa-superscript"></i></button>
-      <button>( )</button>
-      <button class="operator"><i class="fa-solid fa-divide"></i></button>
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button class="operator"><i class="fa-solid fa-xmark"></i></button>
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button class="operator"><i class="fa-solid fa-minus"></i></button>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button class="operator"><i class="fa-solid fa-plus"></i></button>
-      <button><i class="fa-solid fa-plus-minus"></i></button>
-      <button>0</button>
-      <button>.</button>
-      <button class="equal"><i class="fa-solid fa-equals"></i></button>
+      <button onclick="clear_entry()">CE</button>
+      <button onclick="clear_all()">C</button>
+      <button onclick="calc_percentage()"><i class="fa-solid fa-percent"></i></button>
+      <button class="backspace" onclick="backspace()"><i class="fa-solid fa-delete-left"></i></button>
+      <button onclick="square_root()"><i class="fa-solid fa-square-root-variable"></i></button>
+      <button onclick="power_calc()">x²</button>
+      <button onclick="division_one()">¹∕x</button>
+      <button class="operator" onclick="button_calc('/')"><i class="fa-solid fa-divide"></i></button>
+      <button onclick="button_calc('7')">7</button>
+      <button onclick="button_calc('8')">8</button>
+      <button onclick="button_calc('9')">9</button>
+      <button class="operator" onclick="button_calc('*')"><i class="fa-solid fa-xmark"></i></button>
+      <button onclick="button_calc('4')">4</button>
+      <button onclick="button_calc('5')">5</button>
+      <button onclick="button_calc('6')">6</button>
+      <button class="operator" onclick="button_calc('-')"><i class="fa-solid fa-minus"></i></button>
+      <button onclick="button_calc('1')">1</button>
+      <button onclick="button_calc('2')">2</button>
+      <button onclick="button_calc('3')">3</button>
+      <button class="operator" onclick="button_calc('+')"><i class="fa-solid fa-plus"></i></button>
+      <button onclick="plus_minus()"><i class="fa-solid fa-plus-minus"></i></button>
+      <button onclick="button_calc('0')">0</button>
+      <button onclick="button_calc('.')">.</button>
+      <button class="equal" onclick="calculate()"><i class="fa-solid fa-equals"></i></button>
     </div>
   </div>
   <div class="attribution">
     Coded with 💚 by <a href="https://github.com/sue-lima">Sue Lima</a>
   </div>
+  <script src="javaScript/main.js"></script>
 </body>
 </html>
