@@ -1,23 +1,32 @@
+const background = document.querySelector('body');
 box_result = document.getElementById('result');
 box_last_calc = document.getElementById('last-calc');
+
+const darkMode = document.getElementById("dark");
+darkMode.addEventListener("click", ()=> {
+  background.classList.toggle("dark");
+});
 
 function button_calc(num){
   const numero = box_result.innerHTML;
   box_result.innerHTML = numero + num;
+  box_last_calc.innerText=  box_result.innerHTML;
 };
 
 function calculate(){
-  const resultado = box_result.innerHTML;
-  if(resultado){
-    box_last_calc.innerHTML = resultado;
-    box_result.innerHTML = eval(resultado);
+  const result = box_result.innerHTML;
+  const rest =  box_last_calc.innerHTML;
+  if(result && rest){
+    box_last_calc.innerHTML = rest;
+    box_result.innerHTML = eval(result);
   } else {
-    box_result.innerHTML = "Erro de Formatação";
+    box_result.innerHTML = "Formating error";
   }
 };
 
 function clear_all(){
-  window.location.reload()
+  box_result.innerHTML = "";
+  box_last_calc.innerHTML = "";
 }
 
 function clear_entry(){
@@ -43,11 +52,19 @@ function square_root(){
 function division_one(){
   var square_num = 1/box_result.innerText
   box_result.innerText = square_num
+  if (box_result.innerText == "NaN") {
+    alert("⚠️🚨 Please input a valid expression‼️ 🚨⚠️");
+    clear_all()
+  }
 }
 
 function power_calc(){
   var square_num =Math.pow(box_result.innerText, 2)
   box_result.innerText = square_num
+  if (box_result.innerText == "NaN") {
+    alert("⚠️🚨 Please input a valid expression‼️ 🚨⚠️");
+    clear_all()
+  }
 }
 
 function calc_percentage(){
@@ -62,6 +79,10 @@ function calc_percentage(){
   }
   else {
     box_result.innerText = box_result.innerText/100
+  }
+  if (box_result.innerText == "NaN") {
+    alert("⚠️🚨 Please input a valid expression‼️ 🚨⚠️");
+    clear_all()
   }
 }
 
@@ -92,6 +113,10 @@ function plus_minus(){
   if (box_result.innerText == 0){
     box_result.innerText = "-"
     return
+  }
+  if (box_result.innerText == "NaN") {
+    alert("⚠️🚨 Please input a valid expression‼️ 🚨⚠️");
+    clear_all()
   }
   box_result.innerText = -box_result.innerText
 }
