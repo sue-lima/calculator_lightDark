@@ -162,8 +162,8 @@ button {
 
 button:hover {
   background-color: #f7df9c;
-  transform: scale(1.08);
-  transition: all 0.75s ease-in-out;
+  transform: scale(1.03);
+  transition: all 0.2s 0.15s ease-in-out;
 }
 
 .operator {
