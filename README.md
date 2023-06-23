@@ -1,4 +1,4 @@
-# Calculator light and dark theme
+# Calculator Light and Dark theme
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a263873e-29ba-46c4-aece-55e99d95b60c/deploy-status)](https://sue-calculator-lightdark.netlify.app)
 ![linguagens](https://img.shields.io/github/languages/count/sue-lima/calculator_lightDark)
